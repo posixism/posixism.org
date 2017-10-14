@@ -3,62 +3,167 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="ShellShoccarJpn" />
-    <!-- 何かしらファビコンをここにつける -->
-    <!-- <link rel="icon" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgo8IS0tIEF1dGhvcjogU0VOT08sIEtlbgogICAgIExpbmNlbnNlOiBDQzAKICAgICBUaGlzIHdvcmsgaXMgbGljZW5zZWQgdW5kZXIgdGhlIENDMCAxLjAgVW5pdmVyc2FsIExpbmNlbnNlIChodHRwczovL2NyZWF0aXZlY29tbW9ucy5vcmcvcHVibGljZG9tYWluL3plcm8vMS4wLykuIFRvIHRoZSBleHRlbnQgcG9zc2libGUgdW5kZXIgbGF3LCBJIGhhdmUgd2FpdmVkIGFsbCBjb3B5cmlnaHQgYW5kIHJlbGF0ZWQgb3IgbmVpZ2hib3JpbmcgcmlnaHRzIHRvIHRoaXMgd29yay4KLS0+Cgo8c3ZnCiAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIKICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zOnNvZGlwb2RpPSJodHRwOi8vc29kaXBvZGkuc291cmNlZm9yZ2UubmV0L0RURC9zb2RpcG9kaS0wLmR0ZCIKICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiCiAgIHdpZHRoPSIxMDAiCiAgIGhlaWdodD0iMTAwIgogICBpZD0ic3ZnMiIKICAgdmVyc2lvbj0iMS4xIgogICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjQ4LjQgcjk5MzkiCiAgIHNvZGlwb2RpOmRvY25hbWU9InN0YXItY29sb3Iuc3ZnIj4KICA8ZGVmcwogICAgIGlkPSJkZWZzNCI+CiAgICA8bGluZWFyR3JhZGllbnQKICAgICAgIGlkPSJsaW5lYXJHcmFkaWVudDM4MzkiPgogICAgICA8c3RvcAogICAgICAgICBzdHlsZT0ic3RvcC1jb2xvcjojZmZmZmZmO3N0b3Atb3BhY2l0eToxOyIKICAgICAgICAgb2Zmc2V0PSIwIgogICAgICAgICBpZD0ic3RvcDM4NDkiIC8+CiAgICAgIDxzdG9wCiAgICAgICAgIHN0eWxlPSJzdG9wLWNvbG9yOiMwMDAwMDA7c3RvcC1vcGFjaXR5OjE7IgogICAgICAgICBvZmZzZXQ9IjEiCiAgICAgICAgIGlkPSJzdG9wMzg0MyIgLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQKICAgICAgIGlkPSJsaW5lYXJHcmFkaWVudDM4MjUiPgogICAgICA8c3RvcAogICAgICAgICBzdHlsZT0ic3RvcC1jb2xvcjojN2Y5NDg5O3N0b3Atb3BhY2l0eTowLjYxOTYwNzg0OyIKICAgICAgICAgb2Zmc2V0PSIwIgogICAgICAgICBpZD0ic3RvcDM4MzciIC8+CiAgICAgIDxzdG9wCiAgICAgICAgIHN0eWxlPSJzdG9wLWNvbG9yOiNmZmRkYzA7c3RvcC1vcGFjaXR5OjAuNzQ0ODU1OTQ7IgogICAgICAgICBvZmZzZXQ9IjEiCiAgICAgICAgIGlkPSJzdG9wMzgyOSIgLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQKICAgICAgIGlkPSJsaW5lYXJHcmFkaWVudDM3ODUiPgogICAgICA8c3RvcAogICAgICAgICBzdHlsZT0ic3RvcC1jb2xvcjojMDAwMDAwO3N0b3Atb3BhY2l0eTowLjQ5ODAzOTIyOyIKICAgICAgICAgb2Zmc2V0PSIwIgogICAgICAgICBpZD0ic3RvcDM4MTUiIC8+CiAgICAgIDxzdG9wCiAgICAgICAgIHN0eWxlPSJzdG9wLWNvbG9yOiMwMDAwMDA7c3RvcC1vcGFjaXR5OjA7IgogICAgICAgICBvZmZzZXQ9IjEiCiAgICAgICAgIGlkPSJzdG9wMzc4OSIgLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0iYmFzZSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiM2NjY2NjYiCiAgICAgYm9yZGVyb3BhY2l0eT0iMS4wIgogICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwLjAiCiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIKICAgICBpbmtzY2FwZTp6b29tPSIyLjY3IgogICAgIGlua3NjYXBlOmN4PSIzOS4yMjE2NzEiCiAgICAgaW5rc2NhcGU6Y3k9IjUzLjYyNTAyNiIKICAgICBpbmtzY2FwZTpkb2N1bWVudC11bml0cz0icHgiCiAgICAgaW5rc2NhcGU6Y3VycmVudC1sYXllcj0ibGF5ZXIxIgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBpbmtzY2FwZTp3aW5kb3ctd2lkdGg9IjEyNjEiCiAgICAgaW5rc2NhcGU6d2luZG93LWhlaWdodD0iNjc1IgogICAgIGlua3NjYXBlOndpbmRvdy14PSIxNDQ0IgogICAgIGlua3NjYXBlOndpbmRvdy15PSI0NSIKICAgICBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIwIiAvPgogIDxtZXRhZGF0YQogICAgIGlkPSJtZXRhZGF0YTciPgogICAgPHJkZjpSREY+CiAgICAgIDxjYzpXb3JrCiAgICAgICAgIHJkZjphYm91dD0iIj4KICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4KICAgICAgICA8ZGM6dHlwZQogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+CiAgICAgICAgPGRjOnRpdGxlPjwvZGM6dGl0bGU+CiAgICAgIDwvY2M6V29yaz4KICAgIDwvcmRmOlJERj4KICA8L21ldGFkYXRhPgogIDxnCiAgICAgaW5rc2NhcGU6bGFiZWw9ImNpcmNsZSIKICAgICBpbmtzY2FwZTpncm91cG1vZGU9ImxheWVyIgogICAgIGlkPSJsYXllcjEiCiAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCwtOTUyLjM2MjE4KSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUiPgogICAgPHBhdGgKICAgICAgIHNvZGlwb2RpOnR5cGU9ImFyYyIKICAgICAgIHN0eWxlPSJmaWxsOiNlNmU2ZTY7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOm5vbmUiCiAgICAgICBpZD0icGF0aDMwMDQiCiAgICAgICBzb2RpcG9kaTpjeD0iNTQuOTEwNzEzIgogICAgICAgc29kaXBvZGk6Y3k9IjQ3LjU4OTI4NyIKICAgICAgIHNvZGlwb2RpOnJ4PSIzMi4wNTM1NyIKICAgICAgIHNvZGlwb2RpOnJ5PSIzMi4wNTM1NyIKICAgICAgIGQ9Im0gODYuOTY0MjgzLDQ3LjU4OTI4NyBhIDMyLjA1MzU3LDMyLjA1MzU3IDAgMSAxIC02NC4xMDcxNCwwIDMyLjA1MzU3LDMyLjA1MzU3IDAgMSAxIDY0LjEwNzE0LDAgeiIKICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEuNTU5ODg4NywwLDAsMS41NTk4ODg4LC0zNS42NTQ2MDEsOTI4LjEyODE4KSIgLz4KICA8L2c+CiAgPGcKICAgICBpbmtzY2FwZTpncm91cG1vZGU9ImxheWVyIgogICAgIGlkPSJsYXllcjIiCiAgICAgaW5rc2NhcGU6bGFiZWw9InRyaWFuZ2xlIgogICAgIHN0eWxlPSJvcGFjaXR5OjAuOTM5OTk5OTk7ZGlzcGxheTppbmxpbmUiCiAgICAgc29kaXBvZGk6aW5zZW5zaXRpdmU9InRydWUiPgogICAgPHBhdGgKICAgICAgIHN0eWxlPSJmaWxsOiNmZjAwMDA7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOm5vbmUiCiAgICAgICBkPSJNIDUwLDAgMzUuNTYyNSwyNSA2NC40Mzc1LDI1IDUwLDAgeiIKICAgICAgIGlkPSJwYXRoNDEzMyIKICAgICAgIGlua3NjYXBlOmNvbm5lY3Rvci1jdXJ2YXR1cmU9IjAiIC8+CiAgICA8cGF0aAogICAgICAgc3R5bGU9ImZpbGw6I2ZmODAwMDtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6bm9uZSIKICAgICAgIGQ9Ik0gNjQuNDM3NSwyNSA3OC44NzUsNTAgOTMuMzEyNSwyNSA2NC40Mzc1LDI1IHoiCiAgICAgICBpZD0icGF0aDQxMzEiCiAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIiAvPgogICAgPHBhdGgKICAgICAgIHN0eWxlPSJmaWxsOiNmZmZmMDA7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOm5vbmUiCiAgICAgICBkPSJNIDc4Ljg3NSw1MCA2NC40Mzc1LDc1IDkzLjMxMjUsNzUgNzguODc1LDUwIHoiCiAgICAgICBpZD0icGF0aDQxMjkiCiAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIiAvPgogICAgPHBhdGgKICAgICAgIHN0eWxlPSJmaWxsOiMwMGZmMDA7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOm5vbmUiCiAgICAgICBkPSJNIDY0LjQzNzUsNzUgMzUuNTYyNSw3NSA1MCwxMDAgNjQuNDM3NSw3NSB6IgogICAgICAgaWQ9InBhdGg0MTI3IgogICAgICAgaW5rc2NhcGU6Y29ubmVjdG9yLWN1cnZhdHVyZT0iMCIgLz4KICAgIDxwYXRoCiAgICAgICBzdHlsZT0iZmlsbDojMDAwMGZmO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTpub25lIgogICAgICAgZD0iTSAzNS41NjI1LDc1IDIxLjEyNSw1MCA2LjY4NzUsNzUgbCAyOC44NzUsMCB6IgogICAgICAgaWQ9InBhdGg0MTI1IgogICAgICAgaW5rc2NhcGU6Y29ubmVjdG9yLWN1cnZhdHVyZT0iMCIgLz4KICAgIDxwYXRoCiAgICAgICBzdHlsZT0iZmlsbDojODAwMGZmO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTpub25lIgogICAgICAgZD0iTSAyMS4xMjUsNTAgMzUuNTYyNSwyNSA2LjY4NzUsMjUgMjEuMTI1LDUwIHoiCiAgICAgICBpZD0icGF0aDMwMTMiCiAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIiAvPgogICAgPHBhdGgKICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOm5vbmUiCiAgICAgICBkPSJtIDM1LjY4Mzc4MiwyNC45MzMyNTQgYyAwLC0wLjA1MjIgMTQuMTk5NTcsLTI0LjYzOTI2Njc2IDE0LjI3NTg2NiwtMjQuNzE5MTc4NDMgQyA1MC4wMDU1MywwLjE2NjAxOTI1IDYzLjEyNzU1NSwyMi43MjY4NzMgNjQuMjM1NzQxLDI0Ljc1OTEzMiBsIDAuMTE0NDU4LDAuMjA5OSAtMTQuMzMzMjA4LDAgYyAtNy44ODMyNjUsMCAtMTQuMzMzMjA5LC0wLjAxNjEgLTE0LjMzMzIwOSwtMC4wMzU3OCB6IgogICAgICAgaWQ9InBhdGg0MTAxIgogICAgICAgaW5rc2NhcGU6Y29ubmVjdG9yLWN1cnZhdHVyZT0iMCIgLz4KICA8L2c+Cjwvc3ZnPgo=" /> -->
-    <link href="./image/ShellShoccarIcon.png" rel="icon" />
     <title>posixism.org</title>
+
+    <!-- <link rel="icon" type="image/png" href="image/ShellShoccarIcon.png" /> -->
+    <!-- <link rel="icon" href="/image/ShellShoccarIcon.png" /> -->
+    <link rel="icon" href="data:image/png;base64,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" />
+
     <!-- <meta name="description" contents="" /> -->
     <!-- <meta name="keywords" contents="" /> -->
     <link href="default.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
+    <h1 id="posixism.org">posixism.org</h1>
     <header>
-      <p>ここにヘッダーを書く。ナビゲーションも配置したい。ナビゲーションは固定にしてスクロールしても表示できたらいいか。</p>
-      <p>マウスホバーしたら，ドロップダウンリストが出てきて個別のページに飛べると良いかもしれない。</p>
-      <p>基本的な作りは，ひとまず<a href="http://www.jabref.org/">JabRef</a>を参考にする。</p>
-      <p>大まかな内容をこのページに書いて，細かい内容は別のページに誘導するような作りにするか。</p>
-      <p>Publicationとは独立して，blogなど個別の紹介ページを設けても良いかもしれない。</p>
       <nav>
-        <table border="1" style="width: 100%">
+        <table style="width: 100%">
           <tbody>
             <tr>
-              <td><a href="#posixism.org">posixism.org</a><br />
-              </td>
-              <td><a href="#News">News</a></td>
-              <td><a href="#FAQ">FAQ</a></td>
-              <td><a href="#Repository">Repository</a></td>
-              <td><a href="#Publication">Publication</a></td>
-              <td><a href="#Contact">Contact</a></td>
+              <!-- <td><a href="#posixism.org">posixism.org</a><br /> </td> -->
+              <td style="text-align: center; width: 20%"><a href="#About">About</a></td>
+              <td style="text-align: center; width: 20%"><a href="#News">News</a></td>
+              <td style="text-align: center; width: 20%"><a href="#Repository">Repository</a></td>
+              <td style="text-align: center; width: 20%"><a href="#Publication">Publication</a></td>
+              <td style="text-align: center; width: 20%"><a href="#FAQ">FAQ</a></td>
+              <!-- <td style="width: %"><a href="#Contact">Contact</a></td> -->
             </tr>
           </tbody>
         </table>
       </nav>
-      <p>ul要素などでリストにするとレスポンシブにできるだろうけど，配置が面倒なので，保留で，表で作る。</p>
-      <p>テーマカラー的なものを決めておきたい。テーマアイコンは例のシェルショッカーのアイコンでいいかなと思うので，ファビコンにも設定した。</p>
     </header>
     <main>
+      <table style="background-image: url(./image/blue-sky-1348634_1920.jpg); width: 100%;">
+        <!--
+https://pixabay.com/ja/%E9%9D%92%E7%A9%BA-%E7%A9%BA-%E7%B7%91-%E5%A4%A7%E5%9C%B0-%E5%8C%97%E6%B5%B7%E9%81%93-%E6%97%A5%E6%9C%AC-%E9%9B%B2-%E5%A4%8F-%E5%BA%83%E3%81%84-%E9%9D%92-%E9%A2%A8%E6%99%AF-1348634/
+        -->
+        <tbody>
+          <tr>
+            <td>
+              <p style="font-size: 5em; font-weight: bold; color: white; text-align: center;">Write Once,<br />
+                Work Anytime/Anywhere</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
       <section>
-        <h1 id="posixism.org">posixism.org</h1>
-        <p>POSIX原理主義のスローガン，ポリシーを最初に書くとよいかな。</p>
-        <p style="font-size: xx-large; font-weight: bold; text-align: center;">Once Create, Work Anytime/Anywhere</p>
-        <p>このスローガンは検討余地あり。第一印象が大事だと思うので，このスローガンを印象づけるようなデザインを工夫したい。背景に画像を付けるとか（個人的には青空のイメージ）。</p>
-        <p>例：Once Create/Write/Make, Work/Run Anytime/Anywhere</p>
-        <p>プログラムだけでなく，ドキュメントにも適用させたいので，RunではなくWorkを使いたい。</p>
-        <p>サイトのAbout的な内容もここに書いて，このサイトが何であるかを説明する。何を目標としているかなども書くと良いかもしれない。</p>
-        <p>例：posixism.orgはPOSIX原理主義に関する情報を集約することを目的としたサイトとなっています。</p>
+        <h1 id="About">About</h1>
+        <p>posixism.orgはPOSIX原理主義に関する情報を集約することを目的としたサイトです。</p>
+        <section>
+          <h2>POSIXism</h2>
+          <p>POSIX原理主義とは，高い互換性と長い持続性を目指したソフトウェアの開発技法です。松浦智之により2015年頃から提唱された方法論です。</p>
+          <p>POSIX原理主義の主な利点と欠点を以下に掲載します。</p>
+          <table style="width: 100%">
+            <caption>POSIX原理主義の利点と欠点</caption>
+            <tbody>
+              <tr>
+                <td style="width: 50%">
+                  <table class="alert" style="width: 100%">
+                    <thead><th>Good</th></thead>
+                    <tbody><td>
+                        <ul>
+                          <li>ソフトウェアの維持が不要</li>
+                          <li>古いOSから最新OSまで対応可能</li>
+                          <li>インストールが簡単</li>
+                        </ul>
+                    </td></tbody>
+                  </table>
+                </td>
+                <td style="width: 50%">
+                  <table class="structure" style="width: 100%">
+                    <thead><th>Bad</th></thead>
+                    <tbody><td>
+                        <ul>
+                          <li>開発に知識が必要</li>
+                          <li>交換可能性が担保できない最先端分野では適用困難</li>
+                          <li>バイナリーデータの処理など適用困難な分野も存在</li>
+                        </ul>
+                    </td></tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>POSIX（Portable Operating System Interface：移植可能なオペレーティングシステムのインターフェイス）という国際規格があります。この規格は移植可能なOSに必要なインターフェイス（主にC言語のAPIとシェルとコマンド群）が定義されています。1988年に最初に規格化されてから，改訂を重ねながら25年以上存在しています。近年主流となっているLinuxやBSD，MacなどのOSはPOSIXへの準拠を意識したOSとなっています。そのため，POSIXに準拠したソフトウェア開発を行うことで，LinuxやBSD，MacのようにPOSIXに準拠したOSであればいつでもどこでも利用可能な製品を開発可能です。</p>
+          <p>POSIX規格のように，移植可能性（交換可能性）が担保されたソフトウェア開発を行うことをPOSIX原理主義と呼んでいます。</p>
+          <p>交換可能性を担保することで，特定製品（ソフト）への依存性を下げることができ，脆弱性やベンダーサポートの中止といった問題が発生しても，他の代替製品へ切り替えることで利用し続けることができます。</p>
+          <p>このように，POSIX原理主義を実践することで，高い互換性と長い持続性を持ったソフトウェアを開発できます。</p>
+<!--          <p>POSIX原理主義を実践する具体的な指針として以下の3点が示されています。</p>
+          <ol>
+            <li>交換可能性担保</li>
+            <li>POSIX原理主義</li>
+            <li>W3C原理主義</li>
+          </ol>
+            <h3>交換可能性担保</h3>
+            <p>
+              交換可能性（移植可能性）を担保したソフトウェア開発を行います。この交換可能性担保という指針がPOSIX原理主義の本質的な考え方です。
+            </p>
+            <p>具体的には以下の2通りの方針に従って，ソフトウェア開発を行います。
+            </p>
+            <ol>
+              <li>
+                開発したソフトウェアが複数の環境で動作するようにします。
+              </li>
+              <li>
+                利用するライブラリーは代替物が存在するものを利用します。
+              </li>
+            </ol>
+            <p>これにより，今まで動作していた環境や利用していたライブラリーにおいて，不具合や脆弱性が見つかった場合でも，代替物に差し替えることで，今までどおりに動作させることができます。</p>
+            <p>
+              後述する狭義のPOSIX原理主義では，POSIX規格で定義されているコマンドやAPIしか使えません。
+              しかし， POSIX規格では，ネットワーク通信のコマンドがほとんど存在しません。また，バイナリーデータの処理などPOSIX規格の範囲だけでは対応が難しい分野があります。
+              </p>
+              <p>
+                交換可能性を担保することで，POSIX範囲外のコマンドやライブラリーを利用することで，この問題に対応します。例えば，ネットワーク通信はwgetとcurlの2コマンドが存在するので，これらのコマンドを利用することで対応可能です。
+            </p>
+          </section>
+          <section>
+            <h3>POSIX原理主義</h3>
+            <p>
+              POSIX規格に極力準拠したソフトウェア開発を行います。POSIX規格では，C言語（ISO C99）とシェルスクリプトがプログラミング言語として定義されているため，これらを利用します。C言語はコンパイルやバイトオーダーなどハードウェアを意識する必要があるため，主にシェルスクリプトを開発言語として用います。
+              </p>
+              <p>狭義のPOXI原理主義はこの指針のことを指します。</p>
+          </section>
+          <section>
+          <section>
+            <h3>W3C原理主義</h3>
+            <p>W3C原理主義は交換可能性担保の具体例の一つです。</p>
+            <p>Webアプリケーションのクライアントサイドは基本的にHTML，CSS，JavaScriptでの開発となりますが，これらはPOSIX規格には定義されていません。しかし，W3C勧告やECMAによりJavaScriptの仕様は定義されており，これらの規格に準拠したJavaScriptやHTML，CSSで開発することで，FirefoxやChromium，Safariなど複数のWebブラウザーでの動作を実現できます。</p>
+
+          </section>
+-->
+        </section>
+        <section>
+          <h2>ShellShoccar</h2>
+          <p style="text-align: center;"> <img src="./image/shellshoccar-logo.png" /> </p>
+          <p>シェルショッカーとは，「POSIX原理主義を至上とし、エクストリームなシェルスクリプトで人間どもを洗脳し、世界征服を目論む組織。」とのことです（<a
+              href="https://twitter.com/shellshoccarjpn">秘密結社シェルショッカー日本支部</a>より引用）。</p>
+          <p>主にTwitter上で活動が目撃され，以下2名の構成員が確認されています。</p>
+          <table border="1" style="width: 100%">
+            <tbody>
+              <tr>
+                <td style="text-align: center;"> <a href="https://twitter.com/shellshoccarjpn"><img
+                      alt="" src="image/ShellShoccarIcon.png" /></a> </td>
+                <td style="text-align: center;"> <a href="https://twitter.com/col_richie"><img
+                      alt="" src="image/Qmui82l7_400x400.jpg" /></a> </td>
+              </tr>
+              <tr>
+                <td style="text-align: center;"><a href="https://twitter.com/shellshoccarjpn">秘密結社シェルショッカー日本支部@shellshoccarjpn</a><br />
+                </td>
+                <td style="text-align: center;"><a href="https://twitter.com/col_richie">リッチー大佐の中の人@col_richie</a><br />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>過去の活動から，POSIX原理主義に対する中途半端な批判は返り討ちに合う可能性が高いのでご注意ください。的を得た意見であれば，建設的な議論に発展することもあるようです。</p>
+        </section>
       </section>
       <section>
         <h1 id="News">News</h1>
-        <p>ニュース。最近の動向を書く。ブログ記事や関連する内容の記事を掲載しても良いかもしれない。</p>
-        <p>最初はここはなくても良いかもしれない。</p>
-      </section>
-      <section>
-        <h1 id="FAQ">FAQ</h1>
-        <p>よくある質問とその回答を掲載する。</p>
+        <p>Comming Soon!</p>
       </section>
       <section>
         <h1 id="Repository">Repository</h1>
-        <p>GitHubのリポジトリーの紹介。そこで公開されている各種プログラムの紹介ページのリンクなども</p>
         <div style="text-align: center;">
           <figure><img alt="" src="data:image/png;base64,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"
               style="width: 240px; height: 240px;" />  <figcaption><a href="https://github.com/ShellShoccar-jpn/">秘密結社シェルショッカー 日本支部</a></figcaption> </figure>
@@ -72,8 +177,6 @@
       </section>
       <section>
         <h1 id="Publication">Publication</h1>
-        <p>過去の発刊物，発表資料のリンクなどを掲載する。</p>
-        <p>POSIX原理主義に関連する資料をまとめます。</p>
         <section>
           <h2>Paper</h2>
           <ul>
@@ -139,7 +242,6 @@
         </section>
         <section>
           <h2>Article</h2>
-          <p>POSIX規格などの細かい話はArticleの1項目として別のページにするのがいいか。</p>
           <ul>
             <li><a href="http://qiita.com/richmikan@github">richmikan@github - Qiita</a></li>
             <li><a href="https://adventar.org/calendars/1787">POSIX原理主義 Advent Calendar 2016 - Adventar</a></li>
@@ -148,15 +250,43 @@
         <p></p>
       </section>
       <section>
-        <h1 id="Contact">Contact</h1>
-        <p>連絡先を掲載する。SNSのアカウントやメールアドレスがよいだろう。</p>
-        <p><a href="https://twitter.com/shellshoccarjpn">秘密結社シェルショッカー日本支部(@shellshoccarjpn)さん | Twitter</a></p>
-        <p>興味のある人が参加できるように，Google GroupのメーリングリストやSlackの公開ページを掲載する。</p>
+        <h1 id="FAQ">FAQ</h1>
+        <table class="example" style="width: 100%">
+          <thead>
+            <tr>
+              <th style="text-align: center">ID</th>
+              <th style="text-align: center">Question</th>
+              <th style="text-align: center">Answer</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>シェルとバンドル済みコマンド群だけでの開発は難しいのでありませんか？</td>
+              <td>POSIX原理主義の本質は交換可能性（移植可能性）にあります。交換可能性が担保できれば，シェルとバンドルコマンド以外のソフトを使っても問題ありません。</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>ハードルが高いのではありませんか？</td>
+              <td>いきなり全て取り入れる必要はありません。自分が取り入れる分野で徐々に取り入れていけば問題ありません。例えば，定形作業をPOSIXに準拠したシェルスクリプトで行ったり，データに特定ベンダーの独自のバイナリーファイルではなく，CSVやJSON，XMLなど汎用的なデータ形式を採用するようにするといった具合です。</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>開発効率が落ちるのではありませんか？</td>
+              <td>最初の作成時にはやや作業効率が落ちるかもしれません。しかし，その後のバージョンアップや他の環境へのインストールなどの保守が基本的に不要，または簡単になります。そのため，長期的に考えれば，必ずしも開発効率が落ちるとも限りません。</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
+      <!-- <section>                                                                                                                                     -->
+      <!--   <h1 id="Contact">Contact</h1>                                                                                                               -->
+      <!--   <p>Comming Soon.</p>                                                                                                                        -->
+      <!--   <p>連絡先を掲載する。SNSのアカウントやメールアドレスがよいだろう。</p>                                        -->
+      <!--   <p><a href="https://twitter.com/shellshoccarjpn">秘密結社シェルショッカー日本支部(@shellshoccarjpn)さん | Twitter</a></p> -->
+      <!--   <p>興味のある人が参加できるように，Google GroupのメーリングリストやSlackの公開ページを掲載する。</p>  -->
+      <!-- </section>                                                                                                                                    -->
     </main>
     <footer>
       <hr />
-      <p>フッター：帰属などを書く。</p>
     </footer>
   </body>
 </html>
